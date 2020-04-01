@@ -1,0 +1,86 @@
+body{
+    background-color: #f5f5f6;
+}
+h1{
+    color: #ffffff;
+}
+#header_alto {
+    height: 50px;
+    width: 100;
+    background-color: #0d47a1;
+};
+#header_bajo {
+    background-color: #002171;
+    height: 15px;
+    width: 100;
+};
+#icono_home{
+    margin-left: 20px;
+    padding: 10px;
+    height: 45px;
+    width: 45px;
+    align-items: center;
+};
+#titleHome{
+    color: black;
+    text-align: left;
+};
+#usuario {
+    height: 45px;
+    width: 45px;
+    text-align: end;
+}
+a{
+    color: black;
+}
+
+#footer{
+    background-color: #0d47a1; 
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    height: 150px;
+    width: 100;
+}
+
+#iconos{
+    text-align: right;
+}
+.form_reg_recipe{
+    background-color:none;
+    text-align: left;
+        }
+
+ .form-control {
+    background-color:none;
+    text-align: left;
+        }
+
+#iconos{
+    text-align: right;
+}
+#form_reg_recipe{
+    background-color: blue;
+    text-align: center;
+}
+#tarjeta1 {
+    background-color: #0d47a1;
+    border: 2px solid #002171;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 3px;
+    flex: 0 0 33%;
+    max-width: 32%;
+}
+.m{
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+    background-position: center center;
+}
+#form_reg_recipe{
+    background-color: blue;
+    text-align: center;
+}

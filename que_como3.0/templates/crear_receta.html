@@ -1,0 +1,99 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div style="margin: 20px; margin-left: 80px; margin-right: 80px;">
+    <!--Formulario para ingreso de datos (Receta) con estructura de datos de Schema.-->
+    <h3 style="text-align: center;">Crear una nueva receta</h3>
+    <form action="\cargar-registro-receta" method="POST">
+        <div class="form_reg_recipe">
+            <label for="recipe_name">Nombre de la Receta</label>
+            <input type="text" class="form-control" name="recipe_name" id="id" aria-describedby="recipe_name" placeholder="Ingrese el nombre de la receta">
+        </div>
+ 
+        <div class="form_reg_recipe">
+            <label for="total_time">Tiempo Total de preparación</label>
+            <input type="int" class="form-control" name="total_time" id="total_time" placeholder="Tiempo de cocción + Tiempo de preparación de insumos">
+        </div>
+ 
+        <div class="form_reg_recipe">
+            <label for="cook_time">Tiempo de Cocción</label>
+            <input type="number" class="form-control" name="cook_time" id="cook_time" placeholder="Tiempo de cocción">
+        </div>
+
+        <div class="form_reg_recipe">
+            <label for="cooking_Method">Método de cocción</label>
+            <select class="form-control" name= "cooking_method" id="cooking_method">
+                <option>Fritura</option>
+                <option>Al horno</option>
+                <option>Al vapor</option>
+                <option>Asado</option>
+                <option>Olla</option>
+                <option>Saltado</option>
+                <option>Sin Cocción</option>
+            </select>
+        </div>
+
+        <div class="form_reg_recipe">
+            <label for="nutrition">Información Nutricional</label>
+            <input type="NutritionInformation" class="form-control" name="nutrition" id="nutrition" placeholder="kcal aproximadas por porción">
+        </div>
+
+        <div class="form_reg_recipe">
+            <label for="recipe_category">Categoría de la receta</label>
+            <select class="form-control" name="recipe_category" id="recipe_category">
+                <option>Desayuno/ Merienda</option>
+                <option>Almuerzo/ Cena</option>
+                <option>Colación</option>
+                <option>Postre</option>
+            </select>
+        </div>   
+ 
+        <div class="form_reg_recipe">
+            <label for="suitable_for_diet">Apto para dieta</label>
+            <select class="form-control" name="suitable_for_diet" id="suitable_for_diet">
+                <option>Celíaca</option>
+                <option>Diabética</option>
+                <option>Alta en Calorias</option>
+                <option>Baja en calorias</option>
+                <option>Todas las dietas</option>
+            </select>
+        </div>
+
+        <div class="form_reg_recipe">
+            <label for="yields">Rendimiento en porciones</label>
+            <input type="number" class="form-control" name="yields" id="yields" placeholder="Rendimiento estimado en porciones por preparación">
+        </div>
+  
+        <div class="form_reg_recipe">
+            <label for="estimated_cost">Costo estimado</label>
+            <input type="number" class="form-control" name="estimated_cost" id="estimated_cost" placeholder="Costo estimado de preparación">
+        </div>
+  
+        <div class="form_reg_recipe">
+            <label for="recipe_ingredients">Ingredientes:</label>
+            <input type="text" class="form-control" name="recipe_ingredients" id="recipe_ingredients" placeholder="Huevo, Harina, Azucar">
+        </div>
+ 
+        <div class="form_reg_recipe">
+            <label for="recipe_instructions">Procedimiento</label><br>
+            <textarea name="recipe_instructions" id="recipe_instructions" placeholder="Procedimiento" cols="100" rows="10" ></textarea> 
+        </div>
+ 
+        <div class="form_reg_recipe">
+            <label for="comments">Otros Comentarios</label><br>
+            <input type="text" name="comments" id="comments" placeholder="...">
+        </div>
+ 
+        <div class="form_reg_recipe">
+            <label for="author">Creada por:</label><br>
+            <input type="text" name="author" id="author" placeholder="nombre del cocinero">
+        </div>
+ 
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+    <br><br><br><br><br><br>
+
+</div>
+  {% endblock %}

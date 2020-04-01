@@ -1,0 +1,163 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- home -->
+<div>
+    <br><br>
+    <h3 class="container">Menus semanal:</h3>
+    <div id="carouselExampleControls" class="carousel slide container" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h5>Menu general</h5>
+            <img src="{{ url_for('static', filename='img/menu_general.png') }}" class=img-responsive alt="">
+          </div>
+          <div class="carousel-item">
+              <h5>Menu celiaco</h5>
+            <img src="{{ url_for('static', filename='img/menu_celiaco.png') }}" class=img-responsive alt="">
+          </div>
+          <div class="carousel-item">
+              <h5>Menu diabetico</h5>
+            <img src="{{ url_for('static', filename='img/menu_diabetico.png') }}" class=img-responsive alt="">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<br>
+
+
+<div class="container" style="background-color: #6596e0; padding: 10px;">
+    <h3>Tips de la semana:</h3>
+    <ol>
+    <li> Tu menú semanal avalado por nutricionistas y cocineros
+            que harán de comer saludable una tarea sencilla </li>
+        <li>Coma raciones moderadas: reduzca, no elimine alimentos</li>
+        <li>NO se olvide de sonreir</li>
+    </ol>
+</div>
+
+<br>
+<div class="container">
+    <h3>Nuestros nuticionistas:</h3>
+    <div class="row container" style="text-align: center;">
+        <div class="col"  style="background-color: #0d47a1; border: 2px solid #002171; border-radius: 10px; padding: 10px; margin: 3px; text-align: center;">
+            <div><img src="{{ url_for('static', filename='img/nutri1.jpg') }}"></div>
+            <div style="color: white;">
+                <h5>Maria Nuñez</h5>
+                <p>Especialista en bajar de peso</p>
+            </div>
+        </div>
+    
+        <div class="col" style="background-color: #0d47a1; border: 2px solid #002171; border-radius: 10px; padding: 10px; margin: 3px; text-align: center;">
+            <div><img src="{{ url_for('static', filename='img/nutri2.jpg') }}"></div>
+            <div style="color: white;">
+                <h5>Josefina Lopez</h5>
+                <p>Especialista en celiacos</p>
+            </div>
+        </div>
+        <div class="col" style="background-color: #0d47a1; border: 2px solid #002171; border-radius: 10px; padding: 10px; margin: 3px; text-align: center;">
+            <div><img src="{{ url_for('static', filename='img/nutri3.jpg') }}"></div>
+            <div style="color: white;">
+                <h5>Susana Barreto</h5>
+                <p>Especialista en deportistas</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <h3>Nuestros cocineros:</h3>
+    <div class="row container" style="text-align: center;">
+        <div class="col"  style="background-color: #0d47a1; border: 2px solid #002171; border-radius: 10px; padding: 10px; margin: 3px; text-align: center;">
+            <div><img src="{{ url_for('static', filename='img/coci1.jpg') }}"></div>
+            <div style="color: white;">
+                <h5>Francisco Diaz</h5>
+                <p>Comidas caceras</p>
+            </div>
+        </div>
+    
+        <div class="col" style="background-color: #0d47a1; border: 2px solid #002171; border-radius: 10px; padding: 10px; margin: 3px; text-align: center;">
+            <div><img src="{{ url_for('static', filename='img/coci2.jpg') }}"></div>
+            <div style="color: white;">
+                <h5>Marcelo Herrera</h5>
+                <p>Comidas sanas</p>
+            </div>
+        </div>
+        <div class="col" style="background-color: #0d47a1; border: 2px solid #002171; border-radius: 10px; padding: 10px; margin: 3px; text-align: center;">
+            <div><img src="{{ url_for('static', filename='img/coci3.jpg') }}"></div>
+            <div style="color: white;">
+                <h5>Ana Fagundez</h5>
+                <p>Comidas internacionales</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container" style="background-color: #6596e0; padding: 10px;">
+<h3>Comentarios de nuestros clientes</h3>
+    <div class="row">
+        <div class="col" style="text-align: center;">
+            <h5>Stefania</h5>
+            <p>Totalmente recomendable, me ayudo a adelgazar, comer mas sano y apropiado. Me siento mejor animicamente. </p>
+        </div>
+        <div class="col" style="text-align: center;">
+            <h5>Carlos</h5>
+            <p>Tenia problemas para aumentar masa muscular a pesar de ir frecuentemente al gimnasio, en pocas semanas ya pude ver resultads.</p>
+        </div>
+        <div class="col" style="text-align: center;">
+            <h5>Karen</h5>
+            <p>Soy celiaca y es muy complicado el cocinar diario, ahora tengo mas opciones de comidas, recomendable</p>
+        </div>
+    </div>
+    
+</div>
+<br><br>
+<div class="container">
+    <h3>Alimentación saludable para un peso saludable</h3>
+    <p>Uruguay ha experimentado muchos cambios políticos, sociales, económicos y de salud,
+        especialmente en los últimos diez años. Nuestro país ha pasado de ser uno de renta media a
+        uno de renta alta. Se han alcanzado niveles de desempleo históricamente bajos y se evidencia
+        un crecimiento sostenido de la participación de la mujer en el mercado de trabajo. Asimismo, los
+        estilos de vida y, entre ellos, los patrones de conducta alimentaria y de actividad física han estado
+        sometidos a un constante proceso de transformación.
+        Las enfermedades no transmisibles relacionadas con una inadecuada alimentación constituyen el
+        principal problema de salud pública. Dos de cada tres uruguayos están en riesgo de sufrir graves
+        consecuencias a propósito de su sobrepeso u obesidad, hipertensión y complicaciones derivadas
+        de alimentarse de forma inadecuada. Muchas de las conquistas para la salud que han contribuido
+        a la mejora de la calidad de vida y al aumento de la longevidad se ven amenazadas por los altos
+        niveles de sobrepeso y obesidad.
+        <br>
+        La alimentación saludable, compartida y placentera es un
+        derecho humano universal.
+        Uruguay adhiere y ratifica el derecho a la alimentación
+        adecuada en los tratados internacionales y de forma implícita
+        en la Constitución de la República y en múltiples leyes y
+        artículos.
+        Para garantizar este derecho es necesario adoptar estrategias
+        que ayuden a las personas a optar por alternativas más
+        saludables para su vida.
+        Esta Guía tiene por objetivo informar a los ciudadanos
+        uruguayos, para que busquen cambios en sí mismos y en su
+        entorno, y exijan el cumplimiento del derecho humano a la
+        alimentación adecuada y saludable</p>
+        <i>Fuente: <a target="_blank" href="https://www.gub.uy/ministerio-salud-publica/">MSP</a></i></p>
+</div>
+<br>
+
+<br>
+
+
+
+{% endblock %}

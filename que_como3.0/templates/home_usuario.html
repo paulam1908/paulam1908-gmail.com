@@ -1,0 +1,132 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2 style="margin: 40px;">Menú semanal</h2>
+    <div class="table-responsive-lg">
+        <table id="tabla" class="table table-bordered">
+            <thead>
+                <tr>
+                    <td></td>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sabado</th>
+                    <th>Domingo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for unmenu in menu %}
+                <tr>
+                    <th>Desayuno</th>
+                    <td>{{ unmenu.2 }}</td>
+                    <td>{{unmenu.6}}</td>
+                    <td>{{unmenu.10}}</td>
+                    <td>{{unmenu.14}}</td>
+                    <td>{{unmenu.18}}</td>
+                    <td>{{unmenu.22}}</td>
+                    <td>{{unmenu.26}}</td>
+                </tr>
+                <tr>
+                    <th>Almuerzo</th>
+                    <td>{{unmenu.3}}</td>
+                    <td>{{unmenu.7}}</td>
+                    <td>{{unmenu.11}}</td>
+                    <td>{{unmenu.15}}</td>
+                    <td>{{unmenu.19}}</td>
+                    <td>{{unmenu.23}}</td>
+                    <td>{{unmenu.27}}</td>
+                </tr>
+                <tr>
+                    <th>Merienda</th>
+                    <td>{{unmenu.4}}</td>
+                    <td>{{unmenu.8}}</td>
+                    <td>{{unmenu.12}}</td>
+                    <td>{{unmenu.16}}</td>
+                    <td>{{unmenu.20}}</td>
+                    <td>{{unmenu.24}}</td>
+                    <td>{{unmenu.28}}</td>
+                </tr>
+                <tr>
+                    <th>Cena</th>
+                    <td>{{unmenu.5}}</td>
+                    <td>{{unmenu.9}}</td>
+                    <td>{{unmenu.13}}</td>
+                    <td>{{unmenu.17}}</td>
+                    <td>{{unmenu.21}}</td>
+                    <td>{{unmenu.25}}</td>
+                    <td>{{unmenu.29}}</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+    </div>
+    
+
+
+    <div style="margin: 20px;">
+        <h5>Seleccione una opcion de filtrado:</h5>
+        <div class="row">
+            {% for unfiltro in filtro %}
+            <button type="button" class="btn btn-secondary" style="margin: 2px;"><a href="/home-usuario?filtro={{unfiltro.0}}">{{unfiltro.0}}</a></button>
+            {% endfor%}
+        </div>
+        </form>
+    </div>
+    <div style="background-color: #6596e0; padding: 10px;">
+        <div class="container">
+            <h3>Tips para ti:</h3>
+            <ul>
+                <li> Tu menú semanal avalado por nutricionistas y cocineros
+                que harán de comer saludable una tarea sencilla </li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div>
+        <h3><a href="/buscar-receta">Buscador de recetas</a></h3>
+        <script async src="https://cse.google.com/cse.js?cx=014172415971558799859:v1mi3u5tdfn"></script>
+        <div class="gcse-search"></div>
+    </div>
+    <br>
+    <div>
+        <h3>Mensajeria</h3>
+    </div>
+    <br>
+    <div>
+        <h3>Alimentación saludable para un peso saludable</h3>
+        <p>Uruguay ha experimentado muchos cambios políticos, sociales, económicos y de salud,
+            especialmente en los últimos diez años. Nuestro país ha pasado de ser uno de renta media a
+            uno de renta alta. Se han alcanzado niveles de desempleo históricamente bajos y se evidencia
+            un crecimiento sostenido de la participación de la mujer en el mercado de trabajo. Asimismo, los
+            estilos de vida y, entre ellos, los patrones de conducta alimentaria y de actividad física han estado
+            sometidos a un constante proceso de transformación.
+            Las enfermedades no transmisibles relacionadas con una inadecuada alimentación constituyen el
+            principal problema de salud pública. Dos de cada tres uruguayos están en riesgo de sufrir graves
+            consecuencias a propósito de su sobrepeso u obesidad, hipertensión y complicaciones derivadas
+            de alimentarse de forma inadecuada. Muchas de las conquistas para la salud que han contribuido
+            a la mejora de la calidad de vida y al aumento de la longevidad se ven amenazadas por los altos
+            niveles de sobrepeso y obesidad.
+            <br>
+            La alimentación saludable, compartida y placentera es un
+            derecho humano universal.
+            Uruguay adhiere y ratifica el derecho a la alimentación
+            adecuada en los tratados internacionales y de forma implícita
+            en la Constitución de la República y en múltiples leyes y
+            artículos.
+            Para garantizar este derecho es necesario adoptar estrategias
+            que ayuden a las personas a optar por alternativas más
+            saludables para su vida.
+            Esta Guía tiene por objetivo informar a los ciudadanos
+            uruguayos, para que busquen cambios en sí mismos y en su
+            entorno, y exijan el cumplimiento del derecho humano a la
+            alimentación adecuada y saludable</p><br>
+            <i>Fuente: <a target="_blank" href="https://www.gub.uy/ministerio-salud-publica/">MSP</a></i>
+    </div>
+    <br>
+</div>
+
+{% endblock %}
